@@ -1,0 +1,104 @@
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 24px;
+  color: #1a1a2e;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  color: #16213e;
+}
+
+/* card do formulário */
+.form-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* card de cada task */
+.task-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-left: 4px solid #4361ee;
+  transition: opacity 0.3s;
+}
+
+/* task concluída fica com opacidade */
+.task-card.done {
+  opacity: 0.6;
+  border-left-color: #2ec4b6;
+}
+
+.task-card h3 {
+  margin: 0 0 8px 0;
+  color: #1a1a2e;
+}
+
+.task-card p {
+  margin: 0 0 16px 0;
+  color: #666;
+}
+
+.input {
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.input:focus {
+  border-color: #4361ee;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn-primary { background: #4361ee; color: white; }
+.btn-success { background: #2ec4b6; color: white; }
+.btn-warning { background: #ff9f1c; color: white; }
+.btn-danger  { background: #e63946; color: white; }
+
+.empty {
+  text-align: center;
+  color: #999;
+  margin-top: 40px;
+  font-size: 1rem;
+}

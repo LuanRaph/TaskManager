@@ -1,0 +1,57 @@
+<div class="container">
+  <h1>Task Manager</h1>
+  <div class="form-card">
+    <h2>Nova Task</h2>
+    <input
+      [(ngModel)]="newTask.title"
+      placeholder="Título"
+      class="input"
+    />
+    <input
+      [(ngModel)]="newTask.description"
+      placeholder="Descrição"
+      class="input"
+    />
+    <button (click)="createTask(); $event.stopPropagation()" class="btn btn-primary">
+  Criar Task
+</button>
+  </div>
+
+  <div *ngIf="tasks && tasks.length > 0; else empty">
+    <div *ngFor="let task of tasks" class="task-card" [class.done]="task.done">
+
+     
+      <div *ngIf="editingTask?.id !== task.id">
+        <h3>{{ task.title }}</h3>
+        <p>{{ task.description }}</p>
+        <div class="actions">
+          <button (click)="toggleDone(task)" class="btn btn-success">
+            {{ task.done ? 'Reabrir' : 'Concluir' }}
+          </button>
+          <button (click)="startEdit(task)" class="btn btn-warning">
+            Editar
+          </button>
+          <button (click)="deleteTask(task.id!)" class="btn btn-danger">
+            Deletar
+          </button>
+        </div>
+      </div>
+
+      
+      <div *ngIf="editingTask?.id === task.id">
+        <input [(ngModel)]="editingTask!.title" class="input" />
+        <input [(ngModel)]="editingTask!.description" class="input" />
+        <div class="actions">
+          <button (click)="saveEdit(); $event.stopPropagation()" class="btn btn-primary">Salvar</button>
+          <button (click)="cancelEdit()" class="btn btn-danger">Cancelar</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  
+  <ng-template #empty>
+    <p class="empty">Nenhuma task ainda. Cria uma acima!</p>
+  </ng-template>
+</div>
