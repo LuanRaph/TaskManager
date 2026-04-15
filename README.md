@@ -1,22 +1,51 @@
-# TaskManager
+# TaskManager 📝
 
-Aplicação web para gerenciamento de tarefas, permitindo criar, visualizar, atualizar e remover tarefas de forma simples e eficiente.
+Aplicação web fullstack para gerenciamento de tarefas, permitindo criar, visualizar, atualizar e remover tarefas de forma simples e eficiente.
 
-Tecnologias utilizadas
-• Go (Golang)
-• Angular
-• PostgreSQL
+## 🚀 Tecnologias
 
-Funcionalidades
-• Criar tarefas
-• Listar tarefas
-• Atualizar tarefas
-• Deletar tarefas
+* Go (Golang)
+* Angular
+* PostgreSQL
 
-Melhorias futuras
-• Autenticação com JWT
-• Filtros de tarefas
-• Deploy da aplicação
-• Melhorias na interface
+## 📌 Funcionalidades
+
+* Criar tarefas
+* Listar tarefas
+* Atualizar tarefas
+* Deletar tarefas
+
+## 🔗 Endpoints da API
+
+### 📥 Listar tarefas
+
+GET /tasks
+
+### ➕ Criar tarefa
+
+POST /tasks
+
+### ✏️ Atualizar tarefa
+
+PUT /tasks/:id
+
+### ❌ Deletar tarefa
+
+DELETE /tasks/:id
+
+
+## 🗄️ Banco de dados
+
+* PostgreSQL
+* Configure as credenciais no backend antes de iniciar
+
+## 📈 Melhorias futuras
+
+* Autenticação com JWT
+* Filtro de tarefas (concluídas/pendentes)
+* Deploy da aplicação
+* Melhorias na interface
+
+## 👨‍💻 Autor
 
 Desenvolvido por Luan Raphael
